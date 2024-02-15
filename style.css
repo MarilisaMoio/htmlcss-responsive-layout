@@ -59,13 +59,13 @@ a{
 
 .container-xl{
     max-width: 1140px;
-    padding: 0px 1rem;
+    padding: 0px 2rem;
     margin: 0 auto;
 }
 
 html{
     font-family: "PT Sans", sans-serif;
-    font-size: clamp(12px, 1.5vw, 16px);
+    font-size: clamp(13px, 1.5vw, 16px);
     line-height: 1.5rem;
 }
 
@@ -92,6 +92,7 @@ button{
 .btn--blue{
     background-color: #0084FD;
     color: white;
+    font-weight: 600;
 }
 /* #endregion BUTTONS */
 
@@ -146,17 +147,17 @@ header .hamburger{
 }
 
 #demo .col{
-    flex-basis: calc( 100% / 3 - var(--gap) * (2 / 3));
+    width: calc( 100% / 3 - var(--gap) * (2 / 3));
 }
 
 #demo .col--big{
-    flex-basis: calc(100% / 2);
+    width: calc(100% / 2);
 }
 
 .DemoCard{
     background-color: #B5DDFF;
     border-radius: 15px;
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
     text-align: center;
     color: #0084FD;
     height: 100%;
@@ -171,24 +172,23 @@ header .hamburger{
 }
 
 .DemoCard--big-content{
+    width: 60%;
     text-align: left;
+
 }
 
-.DemoCard--big-img, .DemoCard--big-content{
-    width: 50%;
+.DemoCard--big-img{
+    width: 40%;
+    align-self: flex-end;
 }
 
 .DemoCard--big{
-    position: relative;
+    justify-content: space-between;
+    padding-bottom: 0px
 }
 
 .DemoCard--big button{
     margin-top: 2rem
-}
-
-.DemoCard--big-img{
-    position: relative;
-    top: 2rem;
 }
 
 .fa-apple{
@@ -204,7 +204,8 @@ header .hamburger{
     header .hamburger{
         display: block;
         transition: 0.3s;
-        cursor: pointer
+        cursor: pointer;
+        font-size: 1.5rem
     }
 
     header .col:first-child{
@@ -242,16 +243,23 @@ header .hamburger{
     }
 
     .DemoCard--big-img{
+        margin-top: 2rem;
+        align-self: flex-start;
         width: 60%;
-        position: relative;
-        top: 2rem;
-        left: -1rem
     }
 }
 
 @media screen and (max-width: 768px) {
     /*header same as tablet*/
+    #demo .col{
+        width: 100%;
+    }
 
+    .DemoCard--big-img{
+        width: 100%;
+        max-width: 300px;
+        align-self: center;
+    }
 }
 
 /* #endregion RESPONSIVE */
