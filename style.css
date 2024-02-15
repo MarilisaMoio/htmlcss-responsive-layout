@@ -17,7 +17,7 @@ a{
 /* #endregion RESET */
 
 /* #region DEBUG */
-/* body{
+body{
     background-color: greenyellow;
 }
 
@@ -27,7 +27,7 @@ a{
 
 .row > *, .flex > *{
     border: 1px dashed blue;
-} */
+}
 /* #endregion DEBUG */
 
 /* #region FLEX */
@@ -55,7 +55,7 @@ a{
 
 .container-xl{
     max-width: 1140px;
-    padding: 0px 0.5rem;
+    padding: 0px 1rem;
     margin: 0 auto;
 }
 
@@ -82,6 +82,10 @@ header{
     position: sticky;
 }
 
+header #hamb{
+    display: none;
+}
+
 header img.logo{
     height: 2rem;
 }
@@ -92,7 +96,6 @@ header .row{
 
 header .flex{
     gap: calc(var(--gap) + 0.5rem);
-    align-items: center;
 }
 
 header .row{
@@ -103,3 +106,41 @@ header .hamburger{
     display: none;
 }
 /* #endregion HEADER */
+
+
+/* #region RESPONSIVE */
+@media screen and (max-width: 992px) {
+    /*header*/
+    header .hamburger{
+        display: block;
+        transition: 0.3s;
+    }
+
+    header .col:first-child{
+        align-self: flex-start;
+    }
+
+    header .col:last-child, ul{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    header nav, header button{
+        display: none;
+    }
+
+    #hamb:checked ~ .hamburger{
+        transform: rotate(90deg);
+    }
+
+    #hamb:checked ~ nav{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*header same as tablet*/
+    
+}
+
+/* #endregion RESPONSIVE */
