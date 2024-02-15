@@ -136,6 +136,10 @@ header .hamburger{
     #hamb:checked ~ nav{
         display: block;
     }
+
+    #hamb:checked ~ button{
+        display: block;
+    }
 }
 
 @media screen and (max-width: 768px) {
