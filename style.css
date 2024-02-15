@@ -9,4 +9,97 @@
 ul, ol {
     list-style: none;
 }
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
 /* #endregion RESET */
+
+/* #region DEBUG */
+/* body{
+    background-color: greenyellow;
+}
+
+.row, .flex{
+    border: 1px dashed red;
+}
+
+.row > *, .flex > *{
+    border: 1px dashed blue;
+} */
+/* #endregion DEBUG */
+
+/* #region FLEX */
+.flex{
+    display: flex;
+}
+
+.row{
+    display: flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.grow{
+    flex-grow: 1;
+}
+/* #endregion FLEX */
+
+/* #region GENERAL */
+:root{
+    --gap: 1rem;
+}
+
+.container-xl{
+    max-width: 1140px;
+    padding: 0px 0.5rem;
+    margin: 0 auto;
+}
+
+html{
+    font-family: "PT Sans", sans-serif;
+    font-size: clamp(12px, 1.5vw, 16px);
+}
+
+/* #endregion GENERAL */
+
+/* #region BUTTONS */
+button{
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    font-size: inherit;
+}
+/* #endregion BUTTONS */
+
+/* #region HEADER */
+header{
+    background-color: #0084FD;
+    padding: 1rem 0;
+    color: white;
+    position: sticky;
+}
+
+header img.logo{
+    height: 2rem;
+}
+
+header .row{
+    align-items: center;
+}
+
+header .flex{
+    gap: calc(var(--gap) + 0.5rem);
+    align-items: center;
+}
+
+header .row{
+    justify-content: space-between;
+}
+
+header .hamburger{
+    display: none;
+}
+/* #endregion HEADER */
