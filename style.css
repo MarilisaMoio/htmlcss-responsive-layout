@@ -186,11 +186,9 @@ header .hamburger{
     margin-top: 2rem
 }
 
-.DemoCard--big-img img{
-    width: 35%;
-    position: absolute;
-    bottom: 0px;
-    right: 10%;
+.DemoCard--big-img{
+    position: relative;
+    top: 2rem;
 }
 
 .fa-apple{
@@ -206,6 +204,7 @@ header .hamburger{
     header .hamburger{
         display: block;
         transition: 0.3s;
+        cursor: pointer
     }
 
     header .col:first-child{
@@ -231,6 +230,22 @@ header .hamburger{
 
     #hamb:checked ~ button{
         display: block;
+    }
+
+    /*demo*/
+    .DemoCard--big{
+        flex-direction: column;
+    }
+
+    .DemoCard--big > .DemoCard--big-content {
+        width: 100%;
+    }
+
+    .DemoCard--big-img{
+        width: 60%;
+        position: relative;
+        top: 2rem;
+        left: -1rem
     }
 }
 
