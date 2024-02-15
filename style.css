@@ -17,7 +17,7 @@ a{
 /* #endregion RESET */
 
 /* #region DEBUG */
-body{
+/* body{
     background-color: greenyellow;
 }
 
@@ -27,7 +27,7 @@ body{
 
 .row > *, .flex > *{
     border: 1px dashed blue;
-}
+} */
 /* #endregion DEBUG */
 
 /* #region FLEX */
@@ -46,11 +46,15 @@ body{
 .grow{
     flex-grow: 1;
 }
+
+.wrap{
+    flex-wrap: wrap;
+}
 /* #endregion FLEX */
 
 /* #region GENERAL */
 :root{
-    --gap: 1rem;
+    --gap: 1.5rem;
 }
 
 .container-xl{
@@ -62,8 +66,16 @@ body{
 html{
     font-family: "PT Sans", sans-serif;
     font-size: clamp(12px, 1.5vw, 16px);
+    line-height: 1.5rem;
 }
 
+section:nth-child(odd){
+    background-color: rgb(255, 255, 255);
+}
+
+section:nth-child(even){
+    background-color: #9792E4;
+}
 /* #endregion GENERAL */
 
 /* #region BUTTONS */
@@ -72,7 +84,22 @@ button{
     padding: 0.5em 1em;
     font-size: inherit;
 }
+
+.btn--long{
+    padding: 0.6em 3em
+}
+
+.btn--blue{
+    background-color: #0084FD;
+    color: white;
+}
 /* #endregion BUTTONS */
+
+/* #region TYPO */
+h5{
+    font-size: 1.3rem;
+}
+/* #endregion TYPO */
 
 /* #region HEADER */
 header{
@@ -92,20 +119,85 @@ header img.logo{
 
 header .row{
     align-items: center;
+    justify-content: space-between;
+}
+
+header .col.flex{
+    align-items: center;
 }
 
 header .flex{
     gap: calc(var(--gap) + 0.5rem);
 }
 
-header .row{
-    justify-content: space-between;
-}
-
 header .hamburger{
     display: none;
 }
 /* #endregion HEADER */
+
+/* #region DEMO */
+#demo{
+    padding-top: 2rem;
+    padding-bottom: 3rem
+}
+
+#demo .row{
+    gap: var(--gap)
+}
+
+#demo .col{
+    flex-basis: calc( 100% / 3 - var(--gap) * (2 / 3));
+}
+
+#demo .col--big{
+    flex-basis: calc(100% / 2);
+}
+
+.DemoCard{
+    background-color: #B5DDFF;
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: #0084FD;
+    height: 100%;
+}
+
+.DemoCard:not(.DemoCard--big)> * + *, .DemoCard--big-content > * + *{
+    margin-top: 1.5rem;
+}
+
+.DemoCard-text{
+    color: #5A6E7F;
+}
+
+.DemoCard--big-content{
+    text-align: left;
+}
+
+.DemoCard--big-img, .DemoCard--big-content{
+    width: 50%;
+}
+
+.DemoCard--big{
+    position: relative;
+}
+
+.DemoCard--big button{
+    margin-top: 2rem
+}
+
+.DemoCard--big-img img{
+    width: 35%;
+    position: absolute;
+    bottom: 0px;
+    right: 10%;
+}
+
+.fa-apple{
+    margin-right: 0.4rem;
+}
+/* #endregion DEMO */
+
 
 
 /* #region RESPONSIVE */
@@ -144,7 +236,7 @@ header .hamburger{
 
 @media screen and (max-width: 768px) {
     /*header same as tablet*/
-    
+
 }
 
 /* #endregion RESPONSIVE */
