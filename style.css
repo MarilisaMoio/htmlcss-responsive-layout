@@ -39,10 +39,6 @@ a{
     display: flex;
 }
 
-.wrap{
-    flex-wrap: wrap;
-}
-
 .grow{
     flex-grow: 1;
 }
@@ -83,6 +79,11 @@ button{
     border-radius: 25px;
     padding: 0.5em 1em;
     font-size: inherit;
+    cursor: pointer;
+}
+
+button:active{
+    filter: saturate(200%)
 }
 
 .btn--long{
@@ -110,7 +111,7 @@ button{
 
 /* #region TYPO */
 h4{
-    font-size: 1.7rem ;
+    font-size: 1.8rem;
 }
 h5{
     font-size: 1.3rem;
@@ -229,19 +230,16 @@ header .hamburger{
 
 #planning .col:first-child{
     width: 47%;
+    color: white;
 }
 
 #planning .col:last-child{
     width: 45%;
 }
 
-.strat-plan img{
-    max-width: 400px;
-}
-
 .strat-plan h4{
     margin-bottom: 2.5rem;
-    margin-top: 3em;
+    margin-top: 3rem;
 }
 
 .app-dev{
@@ -261,6 +259,10 @@ header .hamburger{
 
 .app-dev > * + *{
     margin-top: 1rem
+}
+
+.app-dev button{
+    color: black;
 }
 
 /* #endregion PLANNING */
@@ -316,13 +318,33 @@ header .hamburger{
         align-self: flex-start;
         width: 60%;
     }
+
+    /*planning*/
+    #planning .row div.col {
+        width: 100%;
+    }
+
+    #planning .container-xl{
+        padding: 1.5rem;
+        padding-top: 3rem;
+    }
+
+    #planning .row{
+        gap: 2rem;
+    }
+
+    #planning h4{
+        font-size: clamp(1rem, 9vw, 6rem);
+        margin-bottom: 1em;
+        margin-top: 2em;
+    }
 }
 
 @media screen and (max-width: 768px) {
     /*header same as tablet*/
 
     /*demo*/
-    #demo .col{
+    #demo .row .col{
         width: 100%;
     }
 
@@ -331,6 +353,8 @@ header .hamburger{
         max-width: 300px;
         align-self: center;
     }
+
+    /*plannings same as tablet*/
 }
 
 /* #endregion RESPONSIVE */
