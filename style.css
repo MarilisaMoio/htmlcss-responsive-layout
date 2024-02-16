@@ -110,11 +110,15 @@ button:active{
 /* #endregion BUTTONS */
 
 /* #region TYPO */
-h2, h4, h5{
+h2, h3, h4, h5{
     line-height: 1em;
 }
 
 h2{
+    font-size: 4rem;
+}
+
+h3{
     font-size: 2.5rem;
 }
 
@@ -292,7 +296,7 @@ header .hamburger{
     padding: 0 5rem;
 }
 
-#testimonials h2{
+#testimonials h3{
     margin: 1em 0;
     color: #9792E4;
 }
@@ -347,10 +351,47 @@ header .hamburger{
 }
 /* #endregion TESTIMONIALS */
 
+/* #region FEATURES */
+#features{
+    padding: 2rem 0;
+}
 
+#features h3{
+    color: white;
+    margin: 1em 0;
+}
+
+#features .row{
+    gap: var(--gap);
+}
+
+#features .col{
+    width: calc( 100% / 3 - var(--gap) * (2 / 3));
+}
+
+.CardFeatures{
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem 2rem;
+    color: #9792E4;
+}
+
+.CardFeatures * + *{
+    margin-top: 1.3rem;
+}
+
+.CardFeatures-content{
+    color: #5A6E7F;
+}
+/* #endregion FEATURES */
 
 /* #region RESPONSIVE */
 @media screen and (max-width: 992px) {
+    /*general*/
+    h3{
+        font-size: 2rem;
+    }
+
     /*header*/
     header .hamburger{
         display: block;
