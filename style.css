@@ -17,7 +17,7 @@ a{
 /* #endregion RESET */
 
 /* #region DEBUG */
-/* body{
+body{
     background-color: greenyellow;
 }
 
@@ -27,7 +27,7 @@ a{
 
 .row > *, .flex > *{
     border: 1px dashed blue;
-} */
+}
 /* #endregion DEBUG */
 
 /* #region FLEX */
@@ -110,11 +110,20 @@ button:active{
 /* #endregion BUTTONS */
 
 /* #region TYPO */
+h2{
+    font-size: 2.5rem;
+}
+
 h4{
     font-size: 1.8rem;
 }
+
 h5{
     font-size: 1.3rem;
+}
+
+.centered{
+    text-align: center;
 }
 /* #endregion TYPO */
 
@@ -125,6 +134,7 @@ header{
     color: white;
     position: sticky;
     top: 0px;
+    z-index: 999;
     box-shadow: 0px 1px 2ch blue;
 }
 
@@ -176,7 +186,6 @@ header .hamburger{
     background-color: #B5DDFF;
     border-radius: 15px;
     padding: 2.5rem 2rem;
-    text-align: center;
     color: #0084FD;
     height: 100%;
 }
@@ -191,7 +200,6 @@ header .hamburger{
 
 .DemoCard--big-content{
     width: 60%;
-    text-align: left;
 }
 
 .DemoCard--big-img{
@@ -245,7 +253,6 @@ header .hamburger{
 .app-dev{
     padding: 1.5rem;
     background-color: white;
-    text-align: center;
     border-radius: 25px;
 }
 
@@ -266,6 +273,45 @@ header .hamburger{
 }
 
 /* #endregion PLANNING */
+
+/* #region TESTIMONIALS */
+#testimonials{
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+#testimonials .centered div, .CardTestimonial-name{
+    text-transform: uppercase;
+}
+
+#testimonials h2{
+    margin: 1em 0;
+    color: #9792E4;
+}
+
+.CardTestimonial{
+    background-color: #9792E4;
+    padding: 1rem;
+    border-radius: 25px;
+    margin: 1rem 0;
+}
+
+.CardTestimonial-imageCropper{
+    overflow: hidden;
+    border-radius: 50%;
+    height: 100%;
+    max-height: 400px;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+}
+
+.CardTestimonial-img{
+    width: 200%;
+    position: relative;
+    left: -50%
+}
+
+/* #endregion TESTIMONIALS */
 
 
 
@@ -325,8 +371,7 @@ header .hamburger{
     }
 
     #planning .container-xl{
-        padding: 1.5rem;
-        padding-top: 3rem;
+        padding: 3rem 2rem;
     }
 
     #planning .row{
