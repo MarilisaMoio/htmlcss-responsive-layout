@@ -467,6 +467,11 @@ header .hamburger{
     .CardTestimonial-imageCropper{
         margin-right: 1.5rem;
     }
+
+    /*features*/
+    #features .col{
+        width: calc( 100% / 2 - var(--gap) * (2 / 4));
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -489,12 +494,18 @@ header .hamburger{
     .CardTestimonial{
         flex-direction: column;
         text-align: center;
+        padding-bottom: 2rem;
     }
 
     .CardTestimonial-imageCropper{
         max-width: 250px;
         margin: 0;
         margin-bottom: 1rem;
+    }
+
+    /*features*/
+    #features .col{
+        width: 100%;
     }
 }
 
