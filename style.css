@@ -496,6 +496,27 @@ header .hamburger{
 
 /* #endregion GET STARTED */
 
+/* #region FOOTER */
+footer{
+    background-color: #333333;
+    color: white;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+footer .container-sm{
+    padding: 0 4rem;
+}
+
+footer a{
+    color: #9792E4;
+    text-decoration: underline;
+}
+
+footer p:last-child{
+    margin-top: 3rem;
+}
+/* #endregion FOOTER */
 
 /* #region RESPONSIVE */
 @media screen and (max-width: 992px) {
@@ -611,7 +632,9 @@ header .hamburger{
         font-size: 0.75rem;
     }
 
-    /* get-started same as desktop*/
+    /*get-started same as desktop*/
+
+    /*footer same as desktop*/
 }
 
 @media screen and (max-width: 768px){
@@ -670,6 +693,11 @@ header .hamburger{
     }
 
     /* get-started same as desktop*/
+
+    /*footer*/
+    footer .container-sm{
+        padding: 0 2rem;
+    }
 }
 
 /* #endregion RESPONSIVE */
