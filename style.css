@@ -393,7 +393,8 @@ header .hamburger{
 }
 
 #about-us .container-xl{
-    padding: 0 4rem;
+    padding: 1rem 4rem;
+    padding-bottom: 1.5rem;
 }
 
 #about-us h2, .au-quote{
@@ -542,7 +543,8 @@ header .hamburger{
 
     /*about-us*/
     #about-us .container-xl{
-        padding: 0 3rem;
+        padding: 1rem 3rem;
+        padding-bottom: 1.5rem;
     }
 
     .col.mainContent{
@@ -562,7 +564,7 @@ header .hamburger{
     }
 
     #about-us button{
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
 }
 
@@ -602,7 +604,7 @@ header .hamburger{
 
     /*about-us*/
     #about-us .container-xl{
-        padding: 0 2rem;
+        padding: 2rem;
     }
 
     #about-us .row{
