@@ -164,7 +164,37 @@ header{
     top: 0px;
     z-index: 999;
     box-shadow: 0px 1px 2ch blue;
+    /*esperimento di nested css - il tema che uso si è rotto ma 
+    mi sembra funzioni tutto, unica fregatura è che i browser
+    chromium riescono a funzionare solo con & quindi non ci si
+    risparmia granché */
+    & #hamb{
+        display: none;
+    }
+
+    & img.logo{
+        height: 2rem;
+    }
+
+    & .row{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    & .col.flex{
+        align-items: center;
+    }
+
+    & .flex{
+        gap: calc(var(--gap) + 0.5rem);
+    }
+
+    & .hamburger{
+        display: none;
+    }
 }
+
+/*versione precedente
 
 header #hamb{
     display: none;
@@ -189,7 +219,8 @@ header .flex{
 
 header .hamburger{
     display: none;
-}
+} */
+
 /* #endregion HEADER */
 
 /* #region DEMO */
