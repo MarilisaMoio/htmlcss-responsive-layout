@@ -353,12 +353,13 @@ header .hamburger{
 
 /* #region FEATURES */
 #features{
-    padding: 2rem 0;
+    padding: 3.5rem 0;
+    padding-bottom: 3rem;
 }
 
 #features h3{
     color: white;
-    margin: 1em 0;
+    margin-bottom: 3.5rem;
 }
 
 #features .row{
@@ -385,11 +386,77 @@ header .hamburger{
 }
 /* #endregion FEATURES */
 
+/* #region ABOUT US */
+#about-us{
+    padding: 3rem 0;
+    line-height: 2rem;
+}
+
+#about-us .container-xl{
+    padding: 0 4rem;
+}
+
+#about-us h2, .au-quote{
+    color: #9792E4;
+}
+
+.au-quote{
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.3em;
+    margin: 1rem 0;
+}
+
+#about-us .row{
+    gap: calc(var(--gap)*2);
+}
+
+.col.mainContent{
+    width: 80%;
+}
+
+.col.sideContent{
+    width: 20%;
+}
+
+.au-mainContent > * + *{
+    margin-top: 2rem;
+}
+
+#about-us img{
+    border-radius: 50%;
+    width: 100%;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.547));
+}
+
+.au-imageContainer{
+    position: relative;
+}
+
+#about-us .fa-quote-left{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(20%);
+    color: #9792E4;
+    z-index: 2;
+    font-size: clamp(10px, 5vw, calc(11.4px * 5));
+}
+
+#about-us button{
+    font-size: 0.75rem;
+}
+
+.fa-linkedin{
+    margin-right: 1em
+}
+/* #endregion ABOUT US */
+
 /* #region RESPONSIVE */
 @media screen and (max-width: 992px) {
     /*general*/
     h3{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     /*header*/
@@ -472,9 +539,34 @@ header .hamburger{
     #features .col{
         width: calc( 100% / 2 - var(--gap) * (2 / 4));
     }
+
+    /*about-us*/
+    #about-us .container-xl{
+        padding: 0 3rem;
+    }
+
+    .col.mainContent{
+        width: 70%;
+    }
+
+    .col.sideContent{
+        width: 30%;
+    }
+
+    .au-quote{
+        font-size: clamp(2rem, 3.5vw, 2rem);
+    }
+
+    #about-us .fa-quote-left{
+        font-size: 8vw;
+    }
+
+    #about-us button{
+        font-size: 1rem;
+    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     /*header same as tablet*/
 
     /*demo*/
@@ -506,6 +598,27 @@ header .hamburger{
     /*features*/
     #features .col{
         width: 100%;
+    }
+
+    /*about-us*/
+    #about-us .container-xl{
+        padding: 0 2rem;
+    }
+
+    #about-us .row{
+        flex-wrap: wrap; 
+    }
+
+    #about-us .mainContent, #about-us .sideContent{
+        width: 100%;
+    }
+
+    #about-us .au-imageContainer{
+        width: 50%;
+    }
+
+    #about-us .fa-quote-left{
+        font-size: 14vw;
     }
 }
 
