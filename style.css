@@ -59,6 +59,12 @@ body{
     margin: 0 auto;
 }
 
+.container-sm{
+    max-width: 540px;
+    padding: 0px 2rem;
+    margin: 0 auto;
+}
+
 html{
     font-family: "PT Sans", sans-serif;
     font-size: clamp(13px, 3vw, 16px);
@@ -71,6 +77,15 @@ section:nth-child(odd){
 
 section:nth-child(even){
     background-color: #9792E4;
+}
+
+/* utility */
+.upper{
+    text-transform: uppercase;
+}
+
+.centered{
+    text-align: center;
 }
 /* #endregion GENERAL */
 
@@ -90,6 +105,10 @@ button:active{
     padding: 0.6em 3em
 }
 
+.btn--thick{
+    padding: 1em 3em  
+}
+
 .btn--blue{
     background-color: #0084FD;
     color: white;
@@ -99,6 +118,11 @@ button:active{
 .btn--lilac{
     background-color: #9792E4;
     color: white;
+}
+
+.btn--white{
+    background-color: white;
+    color: #9792E4;
 }
 
 .btn--circle{
@@ -128,10 +152,6 @@ h4{
 
 h5{
     font-size: 1.3rem;
-}
-
-.centered{
-    text-align: center;
 }
 /* #endregion TYPO */
 
@@ -288,10 +308,6 @@ header .hamburger{
     padding-bottom: 5rem;
 }
 
-#testimonials .centered div{
-    text-transform: uppercase;
-}
-
 #testimonials .centered:first-child{
     padding: 0 5rem;
 }
@@ -346,7 +362,6 @@ header .hamburger{
 }
 
 .CardTestimonial-name{
-    text-transform: uppercase;
     font-weight: 600;
 }
 /* #endregion TESTIMONIALS */
@@ -452,6 +467,35 @@ header .hamburger{
     margin-right: 1em
 }
 /* #endregion ABOUT US */
+
+/* #region GET STARTED */
+#get-started{
+    padding: 3rem 0;
+    color: white;
+}
+
+#get-started * + *{
+    margin-top: 1.5rem;
+}
+
+#get-started h2{
+    color: #FDC15F;
+}
+
+#get-started a{
+    text-decoration: underline;
+}
+
+#get-started .centered div:first-child{
+    color: rgba(255, 255, 255, 0.582);
+}
+
+#get-started .centered div:last-child{
+    font-size: 0.8rem;
+}
+
+/* #endregion GET STARTED */
+
 
 /* #region RESPONSIVE */
 @media screen and (max-width: 992px) {
@@ -566,6 +610,8 @@ header .hamburger{
     #about-us button{
         font-size: 0.75rem;
     }
+
+    /* get-started same as desktop*/
 }
 
 @media screen and (max-width: 768px){
@@ -622,6 +668,8 @@ header .hamburger{
     #about-us .fa-quote-left{
         font-size: 14vw;
     }
+
+    /* get-started same as desktop*/
 }
 
 /* #endregion RESPONSIVE */
